@@ -15,7 +15,21 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![Snake animation](https://raw.githubusercontent.com/evolify/evolify/output/contribution-snake-dark.svg)
+<p align="center" >
+	<picture>
+	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/profile-night-rainbow.svg" />
+	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/profile-season-animate.svg" />
+	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/profile-season-animate.svg" />
+	</picture>
+</p>
+
+<p align="center" >
+	<picture>
+	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/contribution-snake-dark.svg" />
+	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/contribution-snake.svg" />
+	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/evolify/evolify/output-3d-contrib/contribution-snake-dark.svg" />
+	</picture>
+</p>
 
 
 
