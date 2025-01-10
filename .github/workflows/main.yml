@@ -31,6 +31,9 @@ jobs:
             dist/contribution-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: test
+        run: |
+          pwd
 
       - uses: actions/checkout@v3
       - name: generate contribute-3d
@@ -41,9 +44,8 @@ jobs:
           # SETTING_JSON: conf/github-profile-3d-contrib.json
       - name: Copy files
         run: |
+          pwd
           ls ./
-          ls dist
-          ls ../dist
           cp -f profile-3d-contrib/* /dist
           rm -rf profile-3d-contrib
           
