@@ -41,7 +41,7 @@ jobs:
           # SETTING_JSON: conf/github-profile-3d-contrib.json
       - name: Copy files
         run: |
-          ls /dist
+          ls ./
           ls dist
           ls ../dist
           cp -f profile-3d-contrib/* /dist
