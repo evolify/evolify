@@ -13,8 +13,6 @@ on:
     branches:
     - main
     
-  
-
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -27,15 +25,10 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/contribution-snake.svg
-            dist/contribution-snake-dark.svg?palette=github-dark
+            ../dist/contribution-snake.svg
+            ../dist/contribution-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: move dist
-        run: |
-          mkdir ../dist
-          cp dist/* ../dist
 
       - uses: actions/checkout@v3
       - name: generate contribute-3d
@@ -46,7 +39,7 @@ jobs:
           # SETTING_JSON: conf/github-profile-3d-contrib.json
       - name: Copy files
         run: |
-          cp -f profile-3d-contrib/* ../dist
+          cp -f profile-3d-contrib/* ../dist/3d-contrib
           
           
       # push the content of <build_dir> to a branch
