@@ -41,41 +41,6 @@ jobs:
         run: |
           mkdir -p ../dist/3d-contrib
           cp -f profile-3d-contrib/* ../dist/3d-contrib
-
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          architecture: 'x64'
-
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-          # Install dependencies with `pip`
-      - name: Install requirements
-        run: |
-          python3 -m pip install --upgrade pip setuptools wheel
-          python3 -m pip install -r requirements.txt
-
-      # Generate all statistics images
-      - name: Generate images
-        run: |
-          python3 --version
-          python3 stats/main.py
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXCLUDED: ${{ secrets.EXCLUDED }}
-          EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
-          COUNT_STATS_FROM_FORKS: ${{ secrets.COUNT_STATS_FROM_FORKS }}
-
-      - name: Copy stats outputs
-        run: |
-          cp -f dist/* ../dist
           
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
