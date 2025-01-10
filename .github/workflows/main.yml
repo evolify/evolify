@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir ../dist
           cp dist/* ../dist
+          ls ../dist
 
       - uses: actions/checkout@v3
       - name: generate contribute-3d
@@ -49,7 +50,6 @@ jobs:
           ls ../
           ls ../dist
           cp -f profile-3d-contrib/* ../dist
-          rm -rf profile-3d-contrib
           
           
       # push the content of <build_dir> to a branch
