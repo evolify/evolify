@@ -31,6 +31,18 @@ jobs:
             dist/contribution-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+      - name: generate contribute-3d
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          # SETTING_JSON: conf/github-profile-3d-contrib.json
+      - name: Copy files
+        run: |
+          cp -f profile-3d-contrib/* dist
+          rm -rf profile-3d-contrib
           
           
       # push the content of <build_dir> to a branch
