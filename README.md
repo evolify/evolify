@@ -17,9 +17,9 @@ Here are some ideas to get you started:
 
 <p align="center" >
 	<picture>
-	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/evolify/evolify/output/profile-night-rainbow.svg" />
-	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evolify/evolify/output/profile-season-animate.svg" />
-	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/evolify/evolify/output/profile-season-animate.svg" />
+	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/evolify/evolify/output/3d-contrib/profile-night-rainbow.svg" />
+	  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/evolify/evolify/output/3d-contrib/profile-season-animate.svg" />
+	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/evolify/evolify/output/3d-contrib/profile-season-animate.svg" />
 	</picture>
 </p>
 
